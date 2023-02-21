@@ -14,8 +14,8 @@ namespace _2
             Console.Write("請輸入一串數字，並以逗號分隔: ");
             s = Console.ReadLine();
             var n = s.Split(',');
-            var odd = n.Where(x => int.Parse(x) % 2 != 0).OrderBy(x => x);
-            var even = n.Where(x => int.Parse(x) % 2 == 0).OrderBy(x => x);
+            var odd = n.Where(x => int.Parse(x) % 2 != 0).OrderBy(x => int.Parse(x));
+            var even = n.Where(x => int.Parse(x) % 2 == 0).OrderBy(x => int.Parse(x));
             Console.Write("奇數: ");
             foreach (var x in odd) Console.Write($"{x} ");
             Console.Write("\n偶數: ");
