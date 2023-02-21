@@ -10,16 +10,15 @@ namespace _2
     {
         static void Main(string[] args)
         {
-            string s;
             Console.Write("請輸入一串數字，並以逗號分隔: ");
-            s = Console.ReadLine();
+            string s = Console.ReadLine();
             var n = s.Split(',');
             var odd = n.Where(x => int.Parse(x) % 2 != 0).OrderBy(x => int.Parse(x));
             var even = n.Where(x => int.Parse(x) % 2 == 0).OrderBy(x => int.Parse(x));
             Console.Write("奇數: ");
-            foreach (var x in odd) Console.Write($"{x} ");
+            Console.Write(string.Join(",",odd));
             Console.Write("\n偶數: ");
-            foreach (var x in even) Console.Write($"{x} ");
+            Console.Write(string.Join(",",even));
 
             Console.ReadKey();
         }

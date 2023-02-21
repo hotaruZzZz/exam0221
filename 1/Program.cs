@@ -10,12 +10,11 @@ namespace _1
     {
         static void Main(string[] args)
         {
-            string s;
             Console.Write("請輸入一串數字，並以逗號分隔: ");
-            s = Console.ReadLine();
+            string s = Console.ReadLine();
             var n = s.Split(',');
-            var reverse = n.OrderByDescending(x => x);
-            foreach ( var x in reverse) { Console.Write($"{x} "); }
+            var reverse = n.OrderByDescending(x => Array.IndexOf(n, x));
+            Console.WriteLine(string.Join(",",reverse));
 
             Console.ReadKey();
         }
