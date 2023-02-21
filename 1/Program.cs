@@ -13,7 +13,8 @@ namespace _1
             Console.Write("請輸入一串數字，並以逗號分隔: ");
             string s = Console.ReadLine();
             var n = s.Split(',');
-            var reverse = n.OrderByDescending(x => Array.IndexOf(n, x));
+            //var reverse = n.OrderByDescending(x => Array.IndexOf(n, x));
+            var reverse = n.Reverse();
             Console.WriteLine(string.Join(",",reverse));
 
             Console.ReadKey();
